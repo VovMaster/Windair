@@ -13,66 +13,48 @@
 .form-control{
 	border: 1px solid transparent;
 	background: #ffffff;
-	font-size: 20px;
-	font-weight: 200;
+	font-size: 16px;
+	font-weight: 400;
 	color: #000000;
-	padding: (4 / 15) * 0em (8 / 15) + 0em;
+	padding: (4 / 15) * 0em 10px;
 	display: block;
 	width: 100%;
 	.transition(0.2s);
-	font-family: "PF DinDisplay Pro";
+	font-family: "Roboto";
 }
 input.form-control{
-	height: (30 / 15) + 0em;
+	height: 35px;
+	margin-bottom: 18px;
 
-	&:focus{
-		border-color: #f7931d;
-		.box-shadow(0 0 3px 1px rgba(247, 147, 29, 1.0));
-	}
 }
 
 textarea.form-control{
-	height: 175px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	height: 141px;
+	padding-top: 5px;
+	margin: auto;
+	padding-bottom: 5px;
 	resize: none;
-	&:focus{
-		border-color: #f7931d;
-		.box-shadow(0 0 3px 1px rgba(247, 147, 29, 1.0));
-	}
 }
 
-.btn-green{
-	background: #79b03d;
-	&:hover{
-		background: #79b03d - 20%;
-	}
-}
-.btn-orange{
-	background: #f7931d;
-	&:hover{
-		background: #f7931d - 20%;
-	}
-}
-.btn-gray{
-	background: #585858;
-	&:hover{
-		background: #585858 - 20%;
-	}
-}
 
 .btn{
 	display: inline-block;
 	border: none;
 	color: #fff;
-	font-size: 18px;
-	font-weight: 300;
+	font-size: 16px;
+	font-weight: 400;
 	line-height: 1.3;
 	font-family: inherit;
 	margin: auto;
-	text-transform: uppercase;
-	padding: 9px 42px;
+	padding: 7px 10px;
 	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+	.icon-arrow-below{
+		font-size: 21px;
+   		margin: 0 5px;
+    	vertical-align: top;
+	}
 }
 
 .btn-big{
@@ -85,67 +67,28 @@ textarea.form-control{
 	}
 }
 
-
-// FORM MASSEGE
-////////////////////////////////////////
-
-.block-form{
-	background-image: url(../images/form-bg.jpg);
-	background-size: cover;
-	background-position: 50% 100%;
-	padding: 24px 0;
-}
-
-.input-col{
-
-	&:after{
-		clear: both;
-	    content: " ";
-    	display: table;
-    	width: 100%;
-	}
-
-	margin: 0 -4px;
-	.wrapper-form-controll{
-		float: left;
-		padding: 0 4px;
-		width: 50%;
+.btn-white {
+	background: #fff;
+	&:hover{
+		background: #fff  - 20%;
 	}
 }
 
-.wrapper-form-controll{
-	margin-bottom: 8px;
+.btn-block {
+	width: 100%;
 }
 
-.wrapper-form-btn{
-	margin-top: 22px;
-	text-align: center;
-}
-
-.form-massege{
-	margin: auto;
-	max-width: 508px;
-	.form-control{
-		background: rgba(255, 255, 255, 0.95);
-		&:focus{
-			background: #fff;
-		}
-	}
-	p{
-		font-size: 20px;
-		font-weight: 200;
-		color: #fff;
-		margin-bottom: 12px;
-	}
-	> p:first-child{
-		margin-top: -13px;
+.btn-arrow {
+	text-align: left;
+	padding-right: 40px;
+	.icon-arrow-next {
+		position: absolute;
+		right: 13px;
+   		top: 50%;
+   		margin-top: -11px;
+		font-size: 21px;
 	}
 }
-
-
-// END FORM MASSEGE
-////////////////////////////////////////
-
 
 .has-error {
 	border-color: #ff0000;
@@ -155,4 +98,48 @@ textarea.form-control{
 .has-success{
 	border-color: rgba(121, 176, 61, 1);
 	.box-shadow(0 0 3px 1px rgba(121, 176, 61, 1));
+}
+
+.wrapper .btn-color {
+	&:hover {
+		background: #b3b3b3;
+	}
+}
+
+.radio-style {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-top: -2px;
+	input {
+		display: none;
+		&:checked {
+			+ label {
+				&:after {
+					opacity: 1.0;
+				}
+			}
+		}
+	}
+	label{
+		height: 18px;
+		width: 18px;
+		border: 2px solid #cacaca;
+		display: block;
+		.border-radius(100%);
+		position: relative;
+		&:after {
+			content: " ";
+			display: block;
+			height: 8px;
+			.border-radius(100%);
+			opacity: 0;
+			background: #cacaca;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -4px 0 0 -4px;
+			width: 8px;
+		}
+	}
 }

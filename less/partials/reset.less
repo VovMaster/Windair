@@ -68,15 +68,18 @@ div, span, section, article, aside, body, html, input, button,a ,p, form{
 	margin: 0;
 	padding: 0;
 }
-.clearfix:after{
-	content: " ";
-	clear: both;
-	display: table;
-	width: 100%;
-}
-.clearfix:before{
-	content: " ";
-	clear: both;
-	display: table;
-	width: 100%;
+.clearfix(){
+	&:after{
+		content: " ";
+		clear: both;
+		display: table;
+		width: 100%;
+	}
+
+	&:before{
+		content: " ";
+		clear: both;
+		display: table;
+		width: 100%;
+	}
 }
